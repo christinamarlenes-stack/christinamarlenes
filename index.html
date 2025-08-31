@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Christina Marlenes</title>
+<style>
+  :root {
+    --bg: #E9DECD;
+    --maxw: 1100px;
+  }
+  html, body {
+    margin:0; padding:0;
+    background:#E9DECD;
+    font-family:Georgia, 'Times New Roman', serif;
+    line-height:1.6;
+    color:#111;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: clamp(16px, 3vw, 32px);
+  }
+  header {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:16px;
+  }
+  .logo {
+    height: clamp(40px, 8vw, 80px);
+    width:auto;
+  }
+  nav a {
+    margin-right: 16px;
+    text-decoration:none;
+    border-bottom: 1px solid transparent;
+  }
+  nav a:focus, nav a:hover {
+    border-color:#111;
+  }
+  .hero {
+    padding: clamp(24px, 6vw, 64px) 0;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 56px);
+    line-height:1.1;
+    margin: 0 0 12px 0;
+  }
+  .hero p {
+    font-size: clamp(16px, 2.6vw, 20px);
+    max-width: 65ch;
+    margin:0;
+  }
+  .cta {
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top: clamp(16px, 3vw, 28px);
+  }
+  .btn {
+    appearance:none;
+    border:1px solid #111;
+    padding: 10px 14px;
+    border-radius: 999px;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    transition: transform .05s ease, background .2s ease;
+  }
+  .btn:hover, .btn:focus {
+    background:#111;
+    color:white;
+  }
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(8px, 2vw, 16px);
+  }
+  .card {
+    grid-column: span 6;
+    background: rgba(255,255,255,.6);
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 16px;
+    padding: clamp(12px, 2.2vw, 18px);
+    backdrop-filter: blur(2px);
+  }
+  .card h3 { margin-top:0 }
+  @media (max-width: 720px) {
+    .card { grid-column: span 12; }
+    header { justify-content: center; }
+  }
+  footer {
+    border-top: 1px solid rgba(0,0,0,.08);
+    margin-top: clamp(24px, 6vw, 64px);
+    padding-top: clamp(16px, 3vw, 24px);
+    font-size: 14px;
+    color:#444;
+  }
+
+
+.gallery { margin-top: clamp(16px, 4vw, 32px); }
+.gallery h2 { margin-bottom: 8px; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: clamp(6px, 1.5vw, 12px);
+}
+.gallery-grid .thumb {
+  display:block;
+  position:relative;
+  overflow:hidden;
+  border-radius: 10px;
+  outline: 1px solid rgba(0,0,0,.06);
+}
+.gallery-grid img {
+  width:100%; height:140px; object-fit:cover; display:block;
+  transition: transform .25s ease;
+}
+.gallery-grid .thumb:hover img, .gallery-grid .thumb:focus img {
+  transform: scale(1.03);
+}
+/* Lightbox (dialog) */
+#lightbox::backdrop { background: rgba(0,0,0,.65); }
+#lightbox {
+  border:none; padding:0; background: transparent;
+  width: 100%; max-width: none;
+}
+.lightbox-inner {
+  position: fixed; inset: 0; display:flex; align-items:center; justify-content:center;
+  padding: min(4vw, 32px);
+}
+.lightbox-img {
+  max-width: 95vw; max-height: 85vh; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+.lightbox-close {
+  position: fixed; top: 12px; right: 12px;
+  border: none; background: rgba(255,255,255,.9); border-radius: 999px;
+  padding: 8px 12px; font-size: 20px; cursor: pointer;
+}
+@media (max-width: 520px) {
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+  .gallery-grid img { height: 110px; }
+}
+</style>
+<link href="favicon.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon.ico" rel="icon"/><link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/></head>
+<body>
+<div class="wrap">
+<header><picture><source srcset="assets/logo.avif" type="image/avif"/><img alt="Logo" class="logo" src="assets/logo.avif"/></picture>
+</header>
+<main class="hero">
+<h1>Japanske tekstiler &amp; marmorkunst</h1>
+<p>Håndlavede værker inspireret af japanske tekstiler og marmorering.</p>
+<div class="cta">
+<a class="btn" href="mailto:christinamarlenes@gmail.com">Kontakt mig</a>
+<a class="btn" href="https://instagram.com/" rel="me noopener" target="_blank">Følg mig på Instagram</a>
+</div>
+</main>
+<section class="grid">
+<article class="card">
+<h3>Om</h3>
+<p>Jeg arbejder med japanske tekstiler, marmorering og sanselige materialer. Her kan du få et hurtigt overblik og skrive til mig for bestillinger eller samarbejde.</p>
+</article>
+<article class="card">
+<h3>Udvalg</h3>
+<p>Se udvalgte værker og processer på Instagram, eller skriv for at få et katalog.</p>
+</article>
+</section>
+<section class="gallery"><h2>Galleri</h2><div class="gallery-grid"><a class="thumb" data-full="assets/15766D71-EA19-449B-9A6C-215BE7CA98E3.jpg" href="assets/15766D71-EA19-449B-9A6C-215BE7CA98E3.jpg"><img alt="" loading="lazy" src="assets/15766D71-EA19-449B-9A6C-215BE7CA98E3.jpg"/></a><a class="thumb" data-full="assets/37BE8B45-C2E1-4EB9-B397-840023B2B798.jpg" href="assets/37BE8B45-C2E1-4EB9-B397-840023B2B798.jpg"><img alt="" loading="lazy" src="assets/37BE8B45-C2E1-4EB9-B397-840023B2B798.jpg"/></a><a class="thumb" data-full="assets/517859174_18046494896547582_4203432623955425331_n.jpg" href="assets/517859174_18046494896547582_4203432623955425331_n.jpg"><img alt="" loading="lazy" src="assets/517859174_18046494896547582_4203432623955425331_n.jpg"/></a><a class="thumb" data-full="assets/519484531_18046601015547582_8423477143826302309_n.jpg" href="assets/519484531_18046601015547582_8423477143826302309_n.jpg"><img alt="" loading="lazy" src="assets/519484531_18046601015547582_8423477143826302309_n.jpg"/></a><a class="thumb" data-full="assets/523087091_18047651966547582_4400669717153164431_n.jpg" href="assets/523087091_18047651966547582_4400669717153164431_n.jpg"><img alt="" loading="lazy" src="assets/523087091_18047651966547582_4400669717153164431_n.jpg"/></a><a class="thumb" data-full="assets/526627503_18048308654547582_7820744888938850764_n.jpg" href="assets/526627503_18048308654547582_7820744888938850764_n.jpg"><img alt="" loading="lazy" src="assets/526627503_18048308654547582_7820744888938850764_n.jpg"/></a><a class="thumb" data-full="assets/527339937_18048604430547582_6957348107853419285_n.jpg" href="assets/527339937_18048604430547582_6957348107853419285_n.jpg"><img alt="" loading="lazy" src="assets/527339937_18048604430547582_6957348107853419285_n.jpg"/></a><a class="thumb" data-full="assets/527545215_18048891995547582_28743040110643140_n.jpg" href="assets/527545215_18048891995547582_28743040110643140_n.jpg"><img alt="" loading="lazy" src="assets/527545215_18048891995547582_28743040110643140_n.jpg"/></a><a class="thumb" data-full="assets/528032624_18048811289547582_999721760462291394_n.jpg" href="assets/528032624_18048811289547582_999721760462291394_n.jpg"><img alt="" loading="lazy" src="assets/528032624_18048811289547582_999721760462291394_n.jpg"/></a><a class="thumb" data-full="assets/533489531_18049888859547582_928779780161571418_n.jpg" href="assets/533489531_18049888859547582_928779780161571418_n.jpg"><img alt="" loading="lazy" src="assets/533489531_18049888859547582_928779780161571418_n.jpg"/></a><a class="thumb" data-full="assets/538974717_18050722919547582_7066151046479826489_n.jpg" href="assets/538974717_18050722919547582_7066151046479826489_n.jpg"><img alt="" loading="lazy" src="assets/538974717_18050722919547582_7066151046479826489_n.jpg"/></a><a class="thumb" data-full="assets/539911395_18051068441547582_1369578427578510041_n.jpg" href="assets/539911395_18051068441547582_1369578427578510041_n.jpg"><img alt="" loading="lazy" src="assets/539911395_18051068441547582_1369578427578510041_n.jpg"/></a><a class="thumb" data-full="assets/59E701AD-BA37-45A3-B084-A2B1ED313051.jpg" href="assets/59E701AD-BA37-45A3-B084-A2B1ED313051.jpg"><img alt="" loading="lazy" src="assets/59E701AD-BA37-45A3-B084-A2B1ED313051.jpg"/></a><a class="thumb" data-full="assets/5FED1AAA-1EB9-4637-A728-CBF9CC1A6B71.jpg" href="assets/5FED1AAA-1EB9-4637-A728-CBF9CC1A6B71.jpg"><img alt="" loading="lazy" src="assets/5FED1AAA-1EB9-4637-A728-CBF9CC1A6B71.jpg"/></a><a class="thumb" data-full="assets/667CD773-9417-4717-9B24-0F96981D7082.jpg" href="assets/667CD773-9417-4717-9B24-0F96981D7082.jpg"><img alt="" loading="lazy" src="assets/667CD773-9417-4717-9B24-0F96981D7082.jpg"/></a><a class="thumb" data-full="assets/7C1849F1-7061-465A-8E7C-D5D0ADDD73C7.jpg" href="assets/7C1849F1-7061-465A-8E7C-D5D0ADDD73C7.jpg"><img alt="" loading="lazy" src="assets/7C1849F1-7061-465A-8E7C-D5D0ADDD73C7.jpg"/></a><a class="thumb" data-full="assets/92CAA431-BDB2-4899-9053-2003B1945D72.jpg" href="assets/92CAA431-BDB2-4899-9053-2003B1945D72.jpg"><img alt="" loading="lazy" src="assets/92CAA431-BDB2-4899-9053-2003B1945D72.jpg"/></a><a class="thumb" data-full="assets/9B4D4924-BE18-4E93-B860-A56421C770E5.jpg" href="assets/9B4D4924-BE18-4E93-B860-A56421C770E5.jpg"><img alt="" loading="lazy" src="assets/9B4D4924-BE18-4E93-B860-A56421C770E5.jpg"/></a><a class="thumb" data-full="assets/B3974913-72F8-4609-A85F-378B9DB9F1C6.jpg" href="assets/B3974913-72F8-4609-A85F-378B9DB9F1C6.jpg"><img alt="" loading="lazy" src="assets/B3974913-72F8-4609-A85F-378B9DB9F1C6.jpg"/></a><a class="thumb" data-full="assets/B4BC51A9-5E5F-4EE8-AA96-6FEBA1075735.jpg" href="assets/B4BC51A9-5E5F-4EE8-AA96-6FEBA1075735.jpg"><img alt="" loading="lazy" src="assets/B4BC51A9-5E5F-4EE8-AA96-6FEBA1075735.jpg"/></a><a class="thumb" data-full="assets/B7AE1116-7EE1-4F03-BBE8-7C74E55F75D3.jpg" href="assets/B7AE1116-7EE1-4F03-BBE8-7C74E55F75D3.jpg"><img alt="" loading="lazy" src="assets/B7AE1116-7EE1-4F03-BBE8-7C74E55F75D3.jpg"/></a><a class="thumb" data-full="assets/B9C36E7A-15EE-4A0A-B84D-135A9481512D.jpg" href="assets/B9C36E7A-15EE-4A0A-B84D-135A9481512D.jpg"><img alt="" loading="lazy" src="assets/B9C36E7A-15EE-4A0A-B84D-135A9481512D.jpg"/></a><a class="thumb" data-full="assets/C6FC87AE-993F-4129-B9DC-51CB906192CF.jpg" href="assets/C6FC87AE-993F-4129-B9DC-51CB906192CF.jpg"><img alt="" loading="lazy" src="assets/C6FC87AE-993F-4129-B9DC-51CB906192CF.jpg"/></a><a class="thumb" data-full="assets/DC52FB0C-89A2-42CD-86D7-E66897F69B55.jpg" href="assets/DC52FB0C-89A2-42CD-86D7-E66897F69B55.jpg"><img alt="" loading="lazy" src="assets/DC52FB0C-89A2-42CD-86D7-E66897F69B55.jpg"/></a><a class="thumb" data-full="assets/E5D1CAB1-88DB-41A5-9C6A-E7C85612BD6F.jpg" href="assets/E5D1CAB1-88DB-41A5-9C6A-E7C85612BD6F.jpg"><img alt="" loading="lazy" src="assets/E5D1CAB1-88DB-41A5-9C6A-E7C85612BD6F.jpg"/></a><a class="thumb" data-full="assets/FAE5BB15-A019-4776-B47C-6EE3F95E2800.jpg" href="assets/FAE5BB15-A019-4776-B47C-6EE3F95E2800.jpg"><img alt="" loading="lazy" src="assets/FAE5BB15-A019-4776-B47C-6EE3F95E2800.jpg"/></a><a class="thumb" data-full="assets/FullSizeRender.jpg" href="assets/FullSizeRender.jpg"><img alt="" loading="lazy" src="assets/FullSizeRender.jpg"/></a><a class="thumb" data-full="assets/IMG-2214.jpg" href="assets/IMG-2214.jpg"><img alt="" loading="lazy" src="assets/IMG-2214.jpg"/></a><a class="thumb" data-full="assets/IMG_1913.png" href="assets/IMG_1913.png"><img alt="" loading="lazy" src="assets/IMG_1913.png"/></a><a class="thumb" data-full="assets/image.jpg" href="assets/image.jpg"><img alt="" loading="lazy" src="assets/image.jpg"/></a></div></section>
+<footer>
+      © Christina Marlenes
+    </footer>
+</div>
+<dialog aria-label="Billedfremviser" id="lightbox"><div class="lightbox-inner"><img alt="" class="lightbox-img"/></div><button aria-label="Luk" class="lightbox-close">×</button></dialog><script>
+(() => {
+  const dialog = document.getElementById('lightbox');
+  if (!dialog) return;
+  const img = dialog.querySelector('.lightbox-img');
+  const closeBtn = dialog.querySelector('.lightbox-close');
+
+  function openLightbox(src) {
+    img.src = src;
+    if (typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute('open', '');
+      document.documentElement.style.overflow = 'hidden';
+    }
+  }
+  function closeLightbox() {
+    if (typeof dialog.close === 'function') {
+      dialog.close();
+    } else {
+      dialog.removeAttribute('open');
+      document.documentElement.style.overflow = '';
+    }
+    img.removeAttribute('src');
+  }
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a.thumb');
+    if (a) {
+      e.preventDefault();
+      const full = a.getAttribute('data-full') || a.getAttribute('href');
+      openLightbox(full);
+    }
+    if (e.target === dialog || e.target === closeBtn) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.key === 'Escape' || e.key === 'Esc') && (dialog.open || dialog.hasAttribute('open'))) {
+      closeLightbox();
+    }
+  });
+})();
+</script></body>
+</html>
